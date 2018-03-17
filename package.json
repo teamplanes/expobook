@@ -4,5 +4,20 @@
   "description": "Share your component library using Expo",
   "main": "index.js",
   "author": "Planes (@rigellute,  @kirkness)",
-  "license": "MIT"
+  "license": "MIT",
+  "bin": {
+    "expobook": "cli.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "react-navigation": "^1.5.8",
+    "expo": ">=24.0.0",
+    "react": ">=15.0.0"
+  }
 }
