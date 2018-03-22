@@ -17,8 +17,7 @@
   },
   "dependencies": {
     "expo": "*",
-    "react-native":
-      "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-native": "*",
     "react": "*",
     "react-navigation": "*"
   }
