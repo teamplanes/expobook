@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native-expo';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 const App = (props) => {
