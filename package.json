@@ -16,8 +16,10 @@
     "eslint-plugin-react": "^7.7.0"
   },
   "dependencies": {
-    "react-navigation": "^1.5.8",
-    "expo": ">=24.0.0",
-    "react": ">=15.0.0"
+    "expo": "*",
+    "react-native":
+      "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react": "*",
+    "react-navigation": "*"
   }
 }

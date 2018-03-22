@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 const childProcess = require('child_process');
+const path = require('path');
 
-const pathToConfig =
-  process.env.EXPOBOOK_ENV === 'development'
-    ? '../expobook-app.json'
-    : '../../expobook-app.json';
+const pathToConfig = path.resolve(__dirname, './expobook-app.json');
 
 childProcess.execSync(`exp start --lan --ios --config ${pathToConfig}`, {
   stdio: [process.stdin, process.stdout, process.stderr],
