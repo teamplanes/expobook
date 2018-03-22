@@ -18,6 +18,8 @@
   "dependencies": {
     "expo": "*",
     "react": "*",
-    "react-navigation": "*"
+    "react-navigation": "*",
+    "react-native": "*"
   }
+
 }
