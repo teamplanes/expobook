@@ -5,7 +5,7 @@
   "privacy": "public",
   "sdkVersion": "25.0.0",
   "platforms": ["ios", "android"],
-  "entryPoint": "./expobook.js",
+  "entryPoint": "../../expobook.js",
   "version": "1.0.0",
   "orientation": "portrait",
   "icon": "./assets/icon.png",
