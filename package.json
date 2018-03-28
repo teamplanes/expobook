@@ -19,7 +19,6 @@
     "react": "*"
   },
   "dependencies": {
-    "react-native": "*",
     "expo": "^25.0.0",
     "react-native": "*",
     "metro-bundler": "^0.22.1",
