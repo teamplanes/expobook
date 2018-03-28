@@ -16,8 +16,17 @@
     "eslint-plugin-react": "^7.7.0"
   },
   "dependencies": {
-    "expo": "*",
-    "react": "*",
-    "react-native": "*"
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
+    "expo": "^25.0.0",
+    "react-native": "github:expo/react-native#sdk-25",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0"
   }
 }

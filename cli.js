@@ -2,8 +2,13 @@
 const childProcess = require('child_process');
 const path = require('path');
 
-const pathToConfig = path.resolve(process.cwd(), './node_modules/expobook/expobook-app.json');
+process.chdir(__dirname);
+const pathToConfig = path.resolve(process.cwd(), './expobook-app.json');
 
-childProcess.execSync(`exp start --lan --ios --config ${pathToConfig}`, {
+childProcess.execSync('rollup -c ./rollup.config.js', {
   stdio: [process.stdin, process.stdout, process.stderr],
 });
+
+// childProcess.execSync(`exp start --lan --ios --config ${pathToConfig}`, {
+//   stdio: [process.stdin, process.stdout, process.stderr],
+// });
