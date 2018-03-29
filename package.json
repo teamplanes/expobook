@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "expo": "^25.0.0",
-    "react-native": "*",
+    "react-native":
+      "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "metro-bundler": "^0.22.1",
     "react-navigation": "*"
   }
