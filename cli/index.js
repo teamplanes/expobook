@@ -11,7 +11,7 @@ const pathToConfig = getRel('../expobook-app.json');
 
 // eslint-disable-next-line no-console
 console.log('Installing expobook dependencies...');
-childProcess.execSync('npm i', {
+childProcess.execSync('pwd && npm i', {
   stdio: [null, null, process.stderr],
 });
 // Rename ../react-native to ../_react-native
