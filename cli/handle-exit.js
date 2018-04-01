@@ -3,11 +3,13 @@ const path = require('path');
 
 function exitHandler() {
   if (fs.existsSync(path.resolve(__dirname, '../../_react-native'))) {
-    fs.renameSync(path.resolve(
-      __dirname,
-      '../_react-native',
+    fs.renameSync(
+      path.resolve(
+        __dirname,
+        '../../_react-native',
+      ),
       path.resolve(__dirname, '../../react-native'),
-    ));
+    );
   }
 }
 
