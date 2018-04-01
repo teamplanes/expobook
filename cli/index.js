@@ -21,7 +21,7 @@ if (fs.existsSync(getRel('../../react-native'))) {
 }
 
 childProcess.execSync(
-  `cd ../ && ls && ./node_modules/.bin/exp start --lan --ios --config ${pathToConfig}`,
+  `cd ../ && ./node_modules/.bin/exp start --lan --ios --config ${pathToConfig}`,
   {
     stdio: [process.stdin, process.stdout, process.stderr],
   },
