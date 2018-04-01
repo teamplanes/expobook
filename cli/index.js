@@ -9,13 +9,11 @@ const getRel = file => path.resolve(__dirname, file);
 process.chdir(getRel(__dirname, '../'));
 const pathToConfig = getRel('../expobook-app.json');
 
-if (!fs.existsSync(getRel('../node_modules'))) {
-  // eslint-disable-next-line no-console
-  console.log('Installing expobook dependencies...');
-  childProcess.execSync('pwd && npm i', {
-    stdio: [process.stdin, process.stdout, process.stderr],
-  });
-}
+// eslint-disable-next-line no-console
+console.log('Installing expobook dependencies...');
+childProcess.execSync('npm i', {
+  stdio: [process.stdin, process.stdout, process.stderr],
+});
 
 // Rename ../react-native to ../_react-native
 if (fs.existsSync(getRel('../../react-native'))) {
@@ -23,7 +21,7 @@ if (fs.existsSync(getRel('../../react-native'))) {
 }
 
 childProcess.execSync(
-  `cd ../ && ./node_modules/.bin/exp start --lan --ios --config ${pathToConfig}`,
+  `cd ../ && ls && ./node_modules/.bin/exp start --lan --ios --config ${pathToConfig}`,
   {
     stdio: [process.stdin, process.stdout, process.stderr],
   },
