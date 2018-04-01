@@ -6,7 +6,7 @@
   "author": "Planes (@rigellute,  @kirkness)",
   "license": "MIT",
   "bin": {
-    "expobook": "cli.js"
+    "expobook": "cli/index.js"
   },
   "devDependencies": {
     "eslint": "^4.19.0",
