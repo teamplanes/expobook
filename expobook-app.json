@@ -5,7 +5,7 @@
   "privacy": "public",
   "sdkVersion": "25.0.0",
   "platforms": ["ios", "android"],
-  "entryPoint": "./expobook.js",
+  "entryPoint": "./app-entry.js",
   "version": "1.0.0",
   "orientation": "portrait",
   "splash": {
@@ -14,5 +14,9 @@
   },
   "ios": {
     "supportsTablet": true
+  },
+  "packagerOpts": {
+    "projectRoots": "",
+    "config": "rn-cli.config.js"
   }
 }
