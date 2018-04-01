@@ -1,21 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { FlatList } from 'react-native';
 import RowItem from './row-item';
 
 const ComponentList = props => (
-  <View>
-    {Object.keys(props.components).map(componentName => (
+  <FlatList
+    renderItem={({ item }) => (
       <RowItem
-        componentName={componentName}
-        onPress={() => props.navigation.navigate(`Component:${componentName}`)}
+        componentName={item.componentName}
+        onPress={() =>
+          props.navigation.navigate(`Component:${item.componentName}`)
+        }
       />
-    ))}
-  </View>
+    )}
+    data={Object.keys(props.components).map((componentName, i) => ({
+      key: i,
+      componentName,
+    }))}
+  />
 );
 
 ComponentList.propTypes = {
   components: PropTypes.objectOf(PropTypes.node).isRequired,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 export default ComponentList;
