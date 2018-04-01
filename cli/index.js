@@ -7,7 +7,7 @@ require('./handle-exit');
 const getRel = file => path.resolve(__dirname, file);
 
 process.chdir(getRel(__dirname, '../'));
-childProcess.execSync('../');
+childProcess.execSync('cd ../');
 const pathToConfig = getRel('../expobook-app.json');
 
 // eslint-disable-next-line no-console
