@@ -4,9 +4,10 @@ const path = require('path');
 const fs = require('fs');
 require('./handle-exit');
 
-process.chdir(__dirname);
 const getRel = file => path.resolve(__dirname, file);
-const pathToConfig = getRel('./expobook-app.json');
+
+process.chdir(getRel(__dirname, '../'));
+const pathToConfig = getRel('../expobook-app.json');
 
 // eslint-disable-next-line no-console
 console.log('Installing expobook dependencies...');
