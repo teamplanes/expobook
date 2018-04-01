@@ -24,7 +24,8 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  components: PropTypes.objectOf(PropTypes.node).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  components: PropTypes.object.isRequired,
 };
 
 export default components => () => <App components={components} />;
