@@ -19,7 +19,6 @@ if (fs.existsSync(getRel('../react-native'))) {
   fs.renameSync(getRel('../react-native'), getRel('../_react-native'));
 }
 
-
 childProcess.execSync(`exp start --lan --ios --config ${pathToConfig}`, {
   stdio: [process.stdin, process.stdout, process.stderr],
 });
