@@ -7,7 +7,6 @@ require('./handle-exit');
 const getRel = file => path.resolve(__dirname, file);
 
 process.chdir(getRel(__dirname, '../'));
-childProcess.execSync('cd ../');
 const pathToConfig = getRel('../expobook-app.json');
 
 // eslint-disable-next-line no-console
@@ -20,6 +19,6 @@ if (fs.existsSync(getRel('../react-native'))) {
   fs.renameSync(getRel('../react-native'), getRel('../_react-native'));
 }
 
-childProcess.execSync(`exp start --lan --ios --config ${pathToConfig}`, {
+childProcess.execSync(`cd ../ && exp start --lan --ios --config ${pathToConfig}`, {
   stdio: [process.stdin, process.stdout, process.stderr],
 });
