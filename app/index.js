@@ -1,28 +1,12 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 import { StackNavigator } from 'react-navigation';
+import ComponentList from './components/component-list';
 
 const App = (props) => {
   const Navigator = StackNavigator({
     Home: {
-      screen: screenProps => (
-        <View>
-          {Object.keys(props.components).map(componentName => (
-            <TouchableOpacity
-              onPress={() =>
-                screenProps.navigation.navigate(`Component:${componentName}`)
-              }
-            >
-              <Text
-                key={componentName}
-                style={{ fontWeight: '900', fontSize: 30 }}
-              >
-                {componentName}
-              </Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      ),
+      screen: screenProps => <ComponentList {...screenProps} {...props} />,
     },
     ...Object.keys(props.components).reduce(
       (cur, next) => ({
@@ -36,4 +20,9 @@ const App = (props) => {
   });
   return <Navigator />;
 };
+
+App.propTypes = {
+  components: PropTypes.objectOf(PropTypes.node).isRequired,
+};
+
 export default components => () => <App components={components} />;
