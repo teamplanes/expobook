@@ -14,12 +14,11 @@ console.log('Installing expobook dependencies...');
 childProcess.execSync('pwd && npm i', {
   stdio: [process.stdin, process.stdout, process.stderr],
 });
-console.log('==============', fs.existsSync(getRel('../react-native')));
 // Rename ../react-native to ../_react-native
-if (fs.existsSync(getRel('../react-native'))) {
-  fs.renameSync(getRel('../react-native'), getRel('../_react-native'));
+if (fs.existsSync(getRel('../../react-native'))) {
+  fs.renameSync(getRel('../../react-native'), getRel('../../_react-native'));
 }
-console.log('==============22222', fs.existsSync(getRel('../react-native')));
+console.log('==============22222', fs.existsSync(getRel('../../_react-native')));
 
 childProcess.execSync(`cd ../ && exp start --lan --ios --config ${pathToConfig}`, {
   stdio: [process.stdin, process.stdout, process.stderr],
