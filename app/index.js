@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import ComponentList from './components/component-list';
 
@@ -18,6 +19,7 @@ const App = (props) => {
       {},
     ),
   });
+  StatusBar.setBarStyle('light-content');
   return <Navigator />;
 };
 

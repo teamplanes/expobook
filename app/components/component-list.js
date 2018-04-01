@@ -21,7 +21,8 @@ const ComponentList = props => (
 );
 
 ComponentList.propTypes = {
-  components: PropTypes.objectOf(PropTypes.node).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  components: PropTypes.object.isRequired,
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
