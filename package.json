@@ -19,10 +19,11 @@
     "react": "*"
   },
   "dependencies": {
+    "exp": "^51.4.0",
     "expo": "^25.0.0",
+    "exponent": "^14.0.0",
     "ncp": "^2.0.0",
     "prop-types": "^15.6.1",
-    "react-navigation": "*",
-    "exp": "^51.4.0"
+    "react-navigation": "*"
   }
 }
