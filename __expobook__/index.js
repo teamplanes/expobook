@@ -19,7 +19,7 @@ const App = (props) => {
       {},
     ),
   });
-  StatusBar.setBarStyle('light-content');
+  StatusBar.setBarStyle('dark-content');
   return <Navigator />;
 };
 
