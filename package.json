@@ -1,0 +1,29 @@
+{
+  "name": "expobook",
+  "version": "0.0.1",
+  "description": "Share your component library using Expo",
+  "main": "index.js",
+  "author": "Planes (@rigellute,  @kirkness)",
+  "license": "MIT",
+  "bin": {
+    "expobook": "cli.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "dependencies": {
+    "exp": "^51.4.0",
+    "expo": "^25.0.0",
+    "exponent": "^14.0.0",
+    "ncp": "^2.0.0",
+    "prop-types": "^15.6.1",
+    "react-navigation": "*"
+  }
+}
