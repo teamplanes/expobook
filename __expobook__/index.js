@@ -8,12 +8,18 @@ const App = (props) => {
   const Navigator = StackNavigator({
     Home: {
       screen: screenProps => <ComponentList {...screenProps} {...props} />,
+      navigationOptions: () => ({
+        title: '📚',
+      }),
     },
     ...Object.keys(props.components).reduce(
       (cur, next) => ({
         ...cur,
         [`Component:${next}`]: {
           screen: props.components[next],
+          navigationOptions: () => ({
+            title: `${next}`,
+          }),
         },
       }),
       {},
