@@ -1,6 +1,7 @@
 import { KeepAwake, registerRootComponent } from 'expo';
-import app from './app';
-import expobook from '../../expobook';
+import app from 'expobook';
+// This file is imported from the users project.
+import expobook from '../expobook';
 
 if (__DEV__) {
   KeepAwake.activate();
