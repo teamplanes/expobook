@@ -15,11 +15,29 @@ if (!fs.existsSync(appExpobook)) {
   ncp(depExpobook, appExpobook, (err) => {
     if (err) throw err;
     // eslint-disable-next-line no-use-before-define
+    copyAppConfig();
+    // eslint-disable-next-line no-use-before-define
     runExpo();
   });
 } else {
   // eslint-disable-next-line no-use-before-define
+  copyAppConfig();
+  // eslint-disable-next-line no-use-before-define
   runExpo();
+}
+
+// Copy the sdk version from the parent project if it exists
+function copyAppConfig() {
+  const jsonPath = path.resolve(__dirname, '../../app.json');
+  const expobookJsonPath = path.resolve(appExpobook, './expobook-app.json');
+  const existingExpoConfig = fs.existsSync(jsonPath);
+  if (!existingExpoConfig) return;
+  // eslint-disable-next-line
+  const json = require(jsonPath);
+  // eslint-disable-next-line
+  const expobookJson = require(expobookJsonPath);
+  expobookJson.sdkVersion = json.expo.sdkVersion;
+  fs.writeFileSync(expobookJsonPath, JSON.stringify(expobookJson, null, 2));
 }
 
 function runExpo() {

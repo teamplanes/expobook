@@ -14,7 +14,7 @@ const ComponentList = props => (
       />
     )}
     data={Object.keys(props.components).map((componentName, i) => ({
-      key: i,
+      key: `key-${i}`,
       componentName,
     }))}
   />
