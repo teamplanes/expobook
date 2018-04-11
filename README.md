@@ -2,6 +2,10 @@
 
 Expobook allows you to present and develop react-native UI components in a standalone dev environment within an expo app.
 
+### Demo
+
+![Expobook demo](https://raw.githubusercontent.com/teamplanes/expobook/master/expobook.gif)
+
 ### How to setup
 
 Install expobook.
