@@ -4,7 +4,7 @@ Expobook allows you to present and develop react-native UI components in a stand
 
 ### Demo
 
-![Expobook demo](https://raw.githubusercontent.com/teamplanes/expobook/master/expobook.gif | width=200)
+<img src="https://raw.githubusercontent.com/teamplanes/expobook/master/expobook.gif" width="200px">
 
 ### How to setup
 
