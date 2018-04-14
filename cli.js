@@ -34,10 +34,12 @@ function copyAppConfig() {
   if (!existingExpoConfig) return;
   // eslint-disable-next-line
   const json = require(jsonPath);
-  // eslint-disable-next-line
-  const expobookJson = require(expobookJsonPath);
-  expobookJson.sdkVersion = json.expo.sdkVersion;
-  fs.writeFileSync(expobookJsonPath, JSON.stringify(expobookJson, null, 2));
+  if (json && json.expo) {
+    // eslint-disable-next-line
+    const expobookJson = require(expobookJsonPath);
+    expobookJson.sdkVersion = json.expo.sdkVersion;
+    fs.writeFileSync(expobookJsonPath, JSON.stringify(expobookJson, null, 2));
+  }
 }
 
 function runExpo() {
