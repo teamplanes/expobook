@@ -49,3 +49,11 @@ OR better yet Add `"expobook": "./node_modules/.bin/expobook"` to `"scripts"` in
 
 * Enable custom `exp` cli config pass through
 * Fix paths so that `__expobook__` becomes `.expobook`
+
+### Contribution
+
+Lint all files:
+
+```
+npm run lint
+```
