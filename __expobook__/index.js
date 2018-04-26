@@ -7,6 +7,8 @@ import StateRestore from './components/state-restore';
 import StateSync from './components/state-sync';
 import ComponentList from './components/component-list';
 
+export const ROUTE_NAME_KEY = 'ROUTE_NAME';
+
 const App = (props) => {
   const Navigator = StackNavigator({
     Home: {
