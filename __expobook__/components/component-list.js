@@ -8,9 +8,7 @@ const ComponentList = props => (
     renderItem={({ item }) => (
       <RowItem
         componentName={item.componentName}
-        onPress={() =>
-          props.navigation.navigate(`Component:${item.componentName}`)
-        }
+        onPress={() => props.navigate(`Component:${item.componentName}`)}
       />
     )}
     data={Object.keys(props.components).map((componentName, i) => ({
@@ -23,9 +21,7 @@ const ComponentList = props => (
 ComponentList.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   components: PropTypes.object.isRequired,
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired,
-  }).isRequired,
+  navigate: PropTypes.func.isRequired,
 };
 
 export default ComponentList;
