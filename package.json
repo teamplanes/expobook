@@ -24,8 +24,7 @@
   },
   "dependencies": {
     "exp": "^51.4.0",
-    "expo": "^26.0.0",
-    "exponent": "^14.0.0",
+    "expo": "^31.0.6",
     "ncp": "^2.0.0",
     "prop-types": "^15.6.1",
     "react-navigation": "*"
