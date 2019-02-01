@@ -1,18 +1,20 @@
 {
-  "name": "expobook",
-  "description": "This project is really great.",
-  "slug": "example",
-  "privacy": "public",
-  "sdkVersion": "26.0.0",
-  "platforms": ["ios", "android"],
-  "entryPoint": "./__expobook__/entry.js",
-  "version": "1.0.0",
-  "orientation": "portrait",
-  "splash": {
-    "resizeMode": "contain",
-    "backgroundColor": "#ffffff"
-  },
-  "ios": {
-    "supportsTablet": true
+  "expo": {
+    "name": "expobook",
+    "description": "This project is really great.",
+    "slug": "example",
+    "privacy": "public",
+    "sdkVersion": "26.0.0",
+    "platforms": ["ios", "android"],
+    "entryPoint": "./__expobook__/entry.js",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    }
   }
 }
