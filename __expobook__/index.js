@@ -1,20 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StatusBar } from "react-native";
-import { createStackNavigator } from "react-navigation";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StatusBar } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
 
-import StateRestore from "./components/state-restore";
-import StateSync from "./components/state-sync";
-import ComponentList from "./components/component-list";
+import StateRestore from './components/state-restore';
+import StateSync from './components/state-sync';
+import ComponentList from './components/component-list';
 
-export const ROUTE_NAME_KEY = "ROUTE_NAME";
+export const ROUTE_NAME_KEY = 'ROUTE_NAME';
 
 const NEED_SAVE_STATE = __DEV__;
 
-const App = props => {
+const App = (props) => {
   const Navigator = createStackNavigator({
     Home: {
-      screen: screenProps => {
+      screen: (screenProps) => {
         if (NEED_SAVE_STATE) {
           return (
             <StateRestore
@@ -39,8 +39,8 @@ const App = props => {
         );
       },
       navigationOptions: () => ({
-        title: "📚"
-      })
+        title: '📚',
+      }),
     },
     ...Object.keys(props.components).reduce(
       (cur, next) => ({
@@ -48,27 +48,27 @@ const App = props => {
         [`Component:${next}`]: {
           screen: NEED_SAVE_STATE
             ? screenProps => (
-                <StateSync addListener={screenProps.navigation.addListener}>
-                  {React.createElement(props.components[next])}
-                </StateSync>
-              )
+              <StateSync addListener={screenProps.navigation.addListener}>
+                {React.createElement(props.components[next])}
+              </StateSync>
+            )
             : props.components[next],
 
           navigationOptions: () => ({
-            title: `${next}`
-          })
-        }
+            title: `${next}`,
+          }),
+        },
       }),
-      {}
-    )
+      {},
+    ),
   });
-  StatusBar.setBarStyle("dark-content");
+  StatusBar.setBarStyle('dark-content');
   return <Navigator />;
 };
 
 App.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  components: PropTypes.object.isRequired
+  components: PropTypes.object.isRequired,
 };
 
 export default components => () => <App components={components} />;
