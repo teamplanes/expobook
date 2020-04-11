@@ -42,6 +42,12 @@ function copyAppConfig() {
   }
 }
 
+function getSimulatorToRun() {
+  const valueFromParam = process.argv.find(argument => ["--ios", "--android", "--web"].includes[argument])
+  const defaultOSSimulatorValues = process.platform === "darwin"? "--ios" : "--android"
+  return valueFromParam ? valueFromParam : defaultOSSimulatorValues
+}
+
 function runExpo() {
   const childExp = path.resolve(__dirname, './node_modules/.bin/exp');
   const depExp = path.resolve(__dirname, '../.bin/exp');
@@ -55,7 +61,7 @@ function runExpo() {
   process.chdir(path.resolve(__dirname, '../../'));
   const pathToConfig = path.resolve(appExpobook, './expobook-app.json');
   childProcess.execSync(
-    `cd ${cwd} && ${expPath} start --lan --ios --config ${pathToConfig}`,
+    `cd ${cwd} && ${expPath} start --lan ${getSimulatorToRun()} --config ${pathToConfig}`,
     {
       stdio: [process.stdin, process.stdout, process.stderr],
     },
