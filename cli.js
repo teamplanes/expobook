@@ -43,7 +43,7 @@ function copyAppConfig() {
 }
 
 function getSimulatorToRun() {
-  const valueFromParam = process.argv.find(argument => ["--ios", "--android", "--web"].includes[argument])
+  const valueFromParam = process.argv.find(argument => ["--ios", "--android", "--web"].includes(argument))
   const defaultOSSimulatorValues = process.platform === "darwin"? "--ios" : "--android"
   return valueFromParam ? valueFromParam : defaultOSSimulatorValues
 }
